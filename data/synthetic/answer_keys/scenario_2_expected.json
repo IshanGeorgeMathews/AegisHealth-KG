@@ -1,0 +1,61 @@
+{
+  "scenario": 2,
+  "description": "Knee Pain → MRI (Prior Authorization Missing)",
+  "expected_entities": {
+    "icd10": ["M25.561"],
+    "cpt": ["73721"],
+    "carc": ["CO-197"]
+  },
+  "expected_category": "PRIOR_AUTH_MISSING",
+  "expected_policy_id": "ACME-MRI-2024-002",
+  "expected_requirements": [
+    {
+      "id": "REQ-PRIOR-AUTH",
+      "description": "Prior Authorization Form PA-200 submitted at least 5 business days before imaging"
+    },
+    {
+      "id": "REQ-PHYSIO-6WK",
+      "description": "6 weeks (42 days) of documented conservative physical therapy with minimum 6 sessions"
+    },
+    {
+      "id": "REQ-CLINICAL-EXAM",
+      "description": "Physical examination of affected joint within 30 days of MRI request"
+    }
+  ],
+  "expected_missing_requirements": [
+    {
+      "id": "REQ-PRIOR-AUTH",
+      "reason": "Form PA-200 was never submitted. Office staff submitted clinical notes only, believing that was sufficient."
+    },
+    {
+      "id": "REQ-PHYSIO-6WK",
+      "reason": "Physical therapy duration was approximately 5.7 weeks (5 sessions), falling short of the required 6 weeks and 6 sessions."
+    }
+  ],
+  "expected_satisfied_requirements": [
+    {
+      "id": "REQ-CLINICAL-EXAM",
+      "reason": "Clinical examination performed on 2024-07-08 (same day as MRI request) — within the 30-day window. Documented ROM, McMurray test, stability testing, and pain assessment."
+    }
+  ],
+  "expected_reasoning": "Two of three requirements are not satisfied: (1) The required Prior Authorization Form PA-200 was never submitted — the office submitted clinical notes but not the specific form. (2) Physical therapy was approximately 5.7 weeks with 5 sessions, which falls short of the required 6 weeks and 6 sessions. The clinical examination requirement IS satisfied. The appeal should address the PA-200 omission (potentially an administrative error that can be corrected retroactively) and argue that the PT duration was substantially equivalent to the requirement (5.7 weeks vs 6 weeks, with documented clinical improvement and a positive McMurray test supporting the need for imaging).",
+  "expected_appeal_sections": [
+    "administrative_header",
+    "clinical_rebuttal",
+    "legal_citations",
+    "annotated_bibliography"
+  ],
+  "expected_legal_references": [
+    "State Insurance Code §3891.1 — Timely Prior Authorization Review Requirements",
+    "42 CFR §438.210 — Prior Authorization of Services"
+  ],
+  "grounding_check": {
+    "no_invented_requirements": true,
+    "all_citations_from_source": true,
+    "no_hallucinated_evidence": true,
+    "requirement_count_must_equal": 3,
+    "missing_count_must_equal": 2,
+    "must_not_add_requirements_beyond_policy": true,
+    "must_not_claim_pt_was_6_weeks": true
+  }
+}

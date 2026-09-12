@@ -1,0 +1,84 @@
+{
+  "patient_id": "SYN-PAT-002",
+  "scenario": 2,
+  "demographics": {
+    "first_name": "James",
+    "last_name": "Chen",
+    "date_of_birth": "1975-11-22",
+    "gender": "Male",
+    "member_id": "ACM-3314982-02",
+    "group_number": "GRP-20240-CA"
+  },
+  "provider": {
+    "name": "Dr. Michael Torres",
+    "npi": "9876543210",
+    "specialty": "Orthopedic Surgery",
+    "practice_name": "Bay Area Orthopedics & Sports Medicine",
+    "practice_address": "1800 El Camino Real, Suite 220, Palo Alto, CA 94306"
+  },
+  "insurance": {
+    "payer": "AcmeCare Health Insurance",
+    "plan_name": "AcmeCare Preferred PPO",
+    "policy_id": "ACME-MRI-2024-002"
+  },
+  "diagnoses": [
+    {
+      "code": "M25.561",
+      "description": "Pain in right knee",
+      "date_diagnosed": "2024-05-10",
+      "status": "active"
+    }
+  ],
+  "requested_procedure": {
+    "cpt_code": "73721",
+    "description": "MRI of lower extremity joint — without contrast material",
+    "date_requested": "2024-07-08"
+  },
+  "clinical_history": {
+    "physical_therapy": [
+      {
+        "start_date": "2024-05-20",
+        "end_date": "2024-06-28",
+        "duration_weeks": 5.7,
+        "total_sessions": 5,
+        "therapist": "Sarah Kim, PT, DPT",
+        "facility": "Bay Area Physical Therapy Center",
+        "notes": "Patient completed 5 sessions of physical therapy over approximately 5.7 weeks. Exercises included quad strengthening, hamstring stretches, and low-impact cycling. Patient reports mild improvement in pain but continued difficulty with stairs and prolonged standing. Range of motion improved from 95° to 110° flexion. Therapist notes that patient missed the 6th scheduled session due to work conflict.",
+        "outcome": "Partial improvement — pain persists with functional limitation"
+      }
+    ],
+    "clinical_examination": {
+      "date": "2024-07-08",
+      "provider": "Dr. Michael Torres",
+      "findings": {
+        "range_of_motion": "0-110° flexion (normal 0-135°), full extension",
+        "lachman_test": "Negative",
+        "mcmurray_test": "Positive for medial meniscal click with pain",
+        "joint_stability": "Stable to varus/valgus stress",
+        "effusion": "Mild joint effusion noted",
+        "pain_scale": "6/10 with activity, 3/10 at rest (Visual Analog Scale)"
+      }
+    },
+    "clinical_notes": [
+      {
+        "date": "2024-07-08",
+        "provider": "Dr. Michael Torres",
+        "type": "Office Visit Note",
+        "content": "Patient James Chen, 48 y/o male presents with persistent right knee pain (M25.561) of 2 months duration. Patient was initially evaluated on 2024-05-10 and referred for conservative physical therapy. Patient completed 5 PT sessions over approximately 5.7 weeks at Bay Area Physical Therapy Center. While some improvement in ROM was noted (95° to 110° flexion), patient continues to report functional limitations: difficulty navigating stairs, pain with prolonged standing >20 minutes, and an inability to return to recreational running. Physical examination today reveals positive McMurray test with medial meniscal click, mild joint effusion, and restricted ROM compared to contralateral knee. Given persistent symptoms despite conservative therapy trial, MRI of the right knee (CPT 73721) is requested to evaluate for internal derangement, possible meniscal tear, or other structural pathology. Prior authorization request submitted to AcmeCare."
+      }
+    ]
+  },
+  "prior_authorization": {
+    "form_submitted": false,
+    "form_id": null,
+    "submission_date": null,
+    "notes": "Dr. Torres ordered the MRI and submitted clinical notes but did NOT submit the required AcmeCare Prior Authorization Form PA-200. The office staff believed the clinical notes submission was sufficient for authorization."
+  },
+  "claim": {
+    "claim_id": "CLM-2024-0712-002",
+    "date_of_service": "2024-07-12",
+    "date_submitted": "2024-07-15",
+    "billed_amount": 1250.00,
+    "status": "denied"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "scenario": 1,
+  "description": "Type 2 Diabetes → CGM (Step Therapy)",
+  "expected_entities": {
+    "icd10": ["E11.9"],
+    "cpt": ["95251"],
+    "carc": ["CO-167"]
+  },
+  "expected_category": "STEP_THERAPY_NOT_SATISFIED",
+  "expected_policy_id": "ACME-CGM-2024-001",
+  "expected_requirements": [
+    {
+      "id": "REQ-STEP-METFORMIN",
+      "description": "Trial of Metformin for minimum 90 days with documented failure or contraindication"
+    },
+    {
+      "id": "REQ-STEP-SULFONYLUREA",
+      "description": "Trial of sulfonylurea for minimum 90 days with documented failure or contraindication"
+    },
+    {
+      "id": "REQ-HYPO-LOG",
+      "description": "3-month log of blood glucose readings showing recurrent hypoglycemic events or sustained HbA1c > 8.0%"
+    }
+  ],
+  "expected_missing_requirements": [],
+  "expected_reasoning": "Patient has documentation satisfying ALL three requirements: (1) Metformin trial of 198 days with documented inadequate control (HbA1c 8.2%) and GI side effects, (2) Glipizide (sulfonylurea) trial of 191 days with documented hypoglycemic episodes and inadequate control (HbA1c 7.8%), (3) 3-month glucose log with 5 documented hypoglycemic events and current HbA1c of 8.5%. The denial under STEP_THERAPY_NOT_SATISFIED appears to be erroneous — the appeal should demonstrate that step therapy was in fact completed.",
+  "expected_appeal_sections": [
+    "administrative_header",
+    "clinical_rebuttal",
+    "legal_citations",
+    "annotated_bibliography"
+  ],
+  "expected_legal_references": [
+    "State Insurance Code §4521.3 — Step Therapy Protocol Override Rights",
+    "42 CFR §423.578 — Medicare Part D Coverage Determination"
+  ],
+  "grounding_check": {
+    "no_invented_requirements": true,
+    "all_citations_from_source": true,
+    "no_hallucinated_evidence": true,
+    "requirement_count_must_equal": 3,
+    "must_not_add_requirements_beyond_policy": true
+  }
+}

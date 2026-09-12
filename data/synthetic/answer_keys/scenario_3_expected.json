@@ -1,0 +1,63 @@
+{
+  "scenario": 3,
+  "description": "Major Depressive Disorder → Outpatient Therapy (Medical Necessity)",
+  "expected_entities": {
+    "icd10": ["F33.1"],
+    "cpt": ["90837"],
+    "carc": ["CO-50"]
+  },
+  "expected_category": "MEDICAL_NECESSITY_NOT_ESTABLISHED",
+  "expected_policy_id": "ACME-MH-2024-003",
+  "expected_requirements": [
+    {
+      "id": "REQ-MH-BASELINE",
+      "description": "Active behavioral health diagnosis on file with in-network licensed provider (sessions 1-20)"
+    },
+    {
+      "id": "REQ-MH-MEDICAL-NECESSITY",
+      "description": "For session 21+: validated symptom severity assessment (PHQ-9 ≥ 10), treatment plan with measurable goals, progress documentation, and clinical rationale for continuation"
+    }
+  ],
+  "expected_missing_requirements": [],
+  "expected_satisfied_requirements": [
+    {
+      "id": "REQ-MH-BASELINE",
+      "reason": "Active F33.1 diagnosis on file, treated by in-network provider Dr. Rebecca Liu."
+    },
+    {
+      "id": "REQ-MH-MEDICAL-NECESSITY",
+      "reason": "Medical necessity justification package was submitted on 2024-09-10 containing: (1) PHQ-9 serial scores showing 12 at most recent assessment (≥ 10 threshold met), (2) Treatment plan with 3 measurable goals and target dates, (3) Progress notes for sessions 1-20, (4) Clinical rationale documenting ongoing need and risk of regression upon discontinuation."
+    }
+  ],
+  "expected_reasoning": "The patient appears to satisfy ALL policy requirements for session 21 authorization. The medical necessity justification package includes a PHQ-9 score of 12 (above the ≥ 10 threshold), a treatment plan with measurable goals, documented progress, and a clinical rationale for continuation. The denial under MEDICAL_NECESSITY_NOT_ESTABLISHED appears to be potentially erroneous or represents the payer's clinical disagreement with the justification. The appeal should: (1) demonstrate point-by-point that each medical necessity criterion is met per the policy, (2) provide PubMed evidence supporting continued CBT for patients with moderate MDD who have not yet achieved remission, (3) reference the MHPAEA to raise the question of whether the 20-session limit and its application are consistent with parity requirements for comparable medical/surgical benefits.",
+  "expected_appeal_sections": [
+    "administrative_header",
+    "clinical_rebuttal",
+    "legal_citations",
+    "annotated_bibliography"
+  ],
+  "expected_legal_references": [
+    "Mental Health Parity and Addiction Equity Act (MHPAEA), 29 USC §1185a",
+    "42 CFR §438.910 — Parity Requirements for Medicaid Managed Care",
+    "State Insurance Code §6200.7 — Mental Health Coverage Parity Provisions"
+  ],
+  "expected_vector_retrieval": {
+    "required": true,
+    "query_topics": [
+      "CBT efficacy for recurrent major depressive disorder",
+      "Optimal duration of psychotherapy for moderate depression",
+      "Risk of relapse with premature therapy discontinuation in recurrent MDD"
+    ],
+    "note": "Retrieved PubMed abstracts should support the clinical argument but must NOT be fabricated. The LLM may summarize retrieved abstracts but must not invent DOIs, paper titles, or study findings."
+  },
+  "grounding_check": {
+    "no_invented_requirements": true,
+    "all_citations_from_source": true,
+    "no_hallucinated_evidence": true,
+    "requirement_count_must_equal": 2,
+    "missing_count_must_equal": 0,
+    "must_not_add_requirements_beyond_policy": true,
+    "must_not_claim_mhpaea_guarantees_eligibility": true,
+    "must_not_fabricate_pubmed_citations": true
+  }
+}

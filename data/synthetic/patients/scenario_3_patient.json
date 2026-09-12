@@ -1,0 +1,117 @@
+{
+  "patient_id": "SYN-PAT-003",
+  "scenario": 3,
+  "demographics": {
+    "first_name": "Aisha",
+    "last_name": "Williams",
+    "date_of_birth": "1990-03-08",
+    "gender": "Female",
+    "member_id": "ACM-5567123-03",
+    "group_number": "GRP-20240-NY"
+  },
+  "provider": {
+    "name": "Dr. Rebecca Liu",
+    "npi": "5551234567",
+    "specialty": "Psychiatry",
+    "practice_name": "Manhattan Behavioral Health Associates",
+    "practice_address": "300 East 56th Street, Suite 1400, New York, NY 10022"
+  },
+  "insurance": {
+    "payer": "AcmeCare Health Insurance",
+    "plan_name": "AcmeCare Preferred PPO",
+    "policy_id": "ACME-MH-2024-003"
+  },
+  "diagnoses": [
+    {
+      "code": "F33.1",
+      "description": "Major Depressive Disorder, recurrent episode, moderate",
+      "date_diagnosed": "2022-09-15",
+      "status": "active"
+    }
+  ],
+  "requested_procedure": {
+    "cpt_code": "90837",
+    "description": "Psychotherapy, 53 minutes or more with patient",
+    "date_requested": "2024-09-10",
+    "session_number": 21,
+    "calendar_year": 2024
+  },
+  "clinical_history": {
+    "therapy_sessions": {
+      "total_sessions_this_year": 20,
+      "session_range": "2024-01-09 to 2024-08-27",
+      "frequency": "Weekly to biweekly",
+      "modality": "Individual cognitive-behavioral therapy (CBT)",
+      "therapist": "Dr. Rebecca Liu, MD (Psychiatry)"
+    },
+    "symptom_assessments": [
+      {
+        "instrument": "PHQ-9",
+        "date": "2024-01-09",
+        "score": 18,
+        "severity": "Moderately severe",
+        "context": "Baseline at start of calendar year"
+      },
+      {
+        "instrument": "PHQ-9",
+        "date": "2024-04-16",
+        "score": 14,
+        "severity": "Moderate",
+        "context": "After 3 months of weekly CBT — meaningful improvement but still symptomatic"
+      },
+      {
+        "instrument": "PHQ-9",
+        "date": "2024-08-27",
+        "score": 12,
+        "severity": "Moderate",
+        "context": "After 8 months — continued improvement, approaching mild threshold but not yet reached"
+      }
+    ],
+    "treatment_plan": {
+      "date": "2024-08-27",
+      "goals": [
+        {
+          "goal": "Reduce PHQ-9 score to < 10 (mild range)",
+          "status": "In progress — score decreased from 18 to 12",
+          "target_date": "2024-12-31"
+        },
+        {
+          "goal": "Return to full-time employment",
+          "status": "In progress — patient returned to part-time work in June 2024",
+          "target_date": "2025-03-01"
+        },
+        {
+          "goal": "Develop and sustain independent coping strategies for depressive episodes",
+          "status": "In progress — patient demonstrates improved but inconsistent use of CBT techniques",
+          "target_date": "2025-06-01"
+        }
+      ],
+      "clinical_rationale_for_continuation": "Patient has shown consistent, measurable improvement across 20 sessions (PHQ-9 decreased from 18 to 12). However, she has not yet achieved the treatment goal of PHQ-9 < 10 and continues to meet criteria for moderate MDD. Discontinuation at this point would risk regression, particularly given the patient's history of recurrent depressive episodes. An additional 12 sessions (to complete a full course of CBT, typically 16-20 sessions for acute phase plus 8-12 for consolidation) is clinically indicated."
+    },
+    "clinical_notes": [
+      {
+        "date": "2024-09-10",
+        "provider": "Dr. Rebecca Liu",
+        "type": "Treatment Extension Request",
+        "content": "Patient Aisha Williams, 34 y/o female with recurrent Major Depressive Disorder, moderate (F33.1), has completed 20 sessions of individual CBT in the current calendar year (2024-01-09 through 2024-08-27). Patient has demonstrated consistent, measurable improvement: PHQ-9 decreased from 18 (moderately severe) at baseline to 12 (moderate) at most recent assessment. Despite this meaningful progress, the patient has not yet achieved the treatment target of PHQ-9 < 10 (mild range) and continues to meet diagnostic criteria for moderate MDD. The patient has made significant functional gains, including returning to part-time employment in June 2024, but has not yet achieved the goal of full-time employment. CBT technique application remains inconsistent under stress, indicating the need for continued consolidation work. Abrupt discontinuation of therapy at this stage would carry significant risk of symptom regression, particularly given the patient's recurrent episode pattern (F33.1). Requesting authorization for session 21 (CPT 90837) to continue evidence-based treatment. Medical necessity justification package to be submitted with PHQ-9 scores, treatment plan, and progress documentation."
+      }
+    ]
+  },
+  "medical_necessity_justification": {
+    "submitted": true,
+    "submission_date": "2024-09-10",
+    "documents_included": [
+      "PHQ-9 serial scores (3 assessments)",
+      "Treatment plan with measurable goals",
+      "Progress notes for sessions 1-20",
+      "Clinical rationale for continuation"
+    ]
+  },
+  "claim": {
+    "claim_id": "CLM-2024-0910-003",
+    "date_of_service": "2024-09-10",
+    "date_submitted": "2024-09-12",
+    "billed_amount": 200.00,
+    "status": "denied"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "patient_id": "SYN-PAT-001",
+  "scenario": 1,
+  "demographics": {
+    "first_name": "Maria",
+    "last_name": "Gonzalez",
+    "date_of_birth": "1968-04-12",
+    "gender": "Female",
+    "member_id": "ACM-8827451-01",
+    "group_number": "GRP-20240-TX"
+  },
+  "provider": {
+    "name": "Dr. Priya Sharma",
+    "npi": "1234567890",
+    "specialty": "Endocrinology",
+    "practice_name": "Capital Endocrine Associates",
+    "practice_address": "4200 Medical Parkway, Suite 310, Austin, TX 78756"
+  },
+  "insurance": {
+    "payer": "AcmeCare Health Insurance",
+    "plan_name": "AcmeCare Preferred PPO",
+    "policy_id": "ACME-CGM-2024-001"
+  },
+  "diagnoses": [
+    {
+      "code": "E11.9",
+      "description": "Type 2 Diabetes Mellitus without complications",
+      "date_diagnosed": "2019-06-15",
+      "status": "active"
+    }
+  ],
+  "requested_procedure": {
+    "cpt_code": "95251",
+    "description": "Continuous Glucose Monitoring — interpretation and report",
+    "date_requested": "2024-08-15"
+  },
+  "clinical_history": {
+    "medications": [
+      {
+        "name": "Metformin",
+        "dosage": "1000mg twice daily",
+        "start_date": "2019-07-01",
+        "end_date": "2020-01-15",
+        "duration_days": 198,
+        "outcome": "Inadequate glycemic control. HbA1c remained 8.2% after 6 months. Patient reported persistent GI side effects.",
+        "status": "discontinued"
+      },
+      {
+        "name": "Glipizide",
+        "dosage": "10mg daily",
+        "start_date": "2020-02-01",
+        "end_date": "2020-08-10",
+        "duration_days": 191,
+        "outcome": "Inadequate glycemic control. HbA1c dropped to 7.8% but patient experienced 5 documented hypoglycemic episodes.",
+        "status": "discontinued"
+      }
+    ],
+    "lab_results": [
+      {
+        "test": "HbA1c",
+        "value": "8.2%",
+        "date": "2020-01-10",
+        "context": "After 6 months of Metformin"
+      },
+      {
+        "test": "HbA1c",
+        "value": "7.8%",
+        "date": "2020-08-05",
+        "context": "After 6 months of Metformin + Glipizide"
+      },
+      {
+        "test": "HbA1c",
+        "value": "8.5%",
+        "date": "2024-07-20",
+        "context": "Most recent — persistent hyperglycemia"
+      }
+    ],
+    "hypoglycemic_events": [
+      {"date": "2020-04-12", "blood_glucose_mg_dl": 58, "description": "Symptomatic hypoglycemia at work, required glucose tablets"},
+      {"date": "2020-05-03", "blood_glucose_mg_dl": 62, "description": "Morning hypoglycemia, dizziness and sweating"},
+      {"date": "2020-06-18", "blood_glucose_mg_dl": 54, "description": "Nocturnal hypoglycemia, awoken by sweating"},
+      {"date": "2020-07-01", "blood_glucose_mg_dl": 65, "description": "Post-exercise hypoglycemia"},
+      {"date": "2020-07-29", "blood_glucose_mg_dl": 51, "description": "Severe hypoglycemia, near-syncope, ER visit"}
+    ],
+    "clinical_notes": [
+      {
+        "date": "2024-08-15",
+        "provider": "Dr. Priya Sharma",
+        "type": "Progress Note",
+        "content": "Patient Maria Gonzalez, 56 y/o female with Type 2 Diabetes (E11.9) presents for follow-up. Patient has failed both first-line (Metformin) and second-line (Glipizide) oral therapies over the past 4 years. Metformin was discontinued after 6 months due to persistent GI intolerance and inadequate control (HbA1c 8.2%). Glipizide was subsequently trialed for 6 months but resulted in recurrent hypoglycemic episodes (5 documented events, including one ER visit for near-syncope with BG 51 mg/dL) while still not achieving target HbA1c (7.8%). Current HbA1c is 8.5%, indicating persistent hyperglycemia. Patient has maintained a 3-month blood glucose log demonstrating erratic glycemic patterns with both hyper- and hypoglycemic excursions. Requesting authorization for Continuous Glucose Monitoring (CPT 95251) to enable real-time glucose trend tracking and improve glycemic management. CGM is medically necessary given the documented failure of step therapy and ongoing glycemic instability."
+      }
+    ]
+  },
+  "claim": {
+    "claim_id": "CLM-2024-0815-001",
+    "date_of_service": "2024-08-15",
+    "date_submitted": "2024-08-20",
+    "billed_amount": 450.00,
+    "status": "denied"
+  }
+}
