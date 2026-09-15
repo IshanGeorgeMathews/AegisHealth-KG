@@ -1,0 +1,157 @@
+{
+  "reference_type": "ICD-10-CM Code Reference",
+  "version": "FY2024",
+  "description": "ICD-10-CM codes used in AegisHealth-KG prototype scenarios. This is a curated subset — the full ICD-10-CM contains ~70,000 codes.",
+  "codes": [
+    {
+      "code": "E11.9",
+      "description": "Type 2 Diabetes Mellitus without complications",
+      "category": "E11",
+      "category_description": "Type 2 Diabetes Mellitus",
+      "chapter": "4",
+      "chapter_description": "Endocrine, nutritional and metabolic diseases (E00–E89)",
+      "block": "E08-E13",
+      "block_description": "Diabetes mellitus",
+      "clinical_notes": "Type 2 diabetes mellitus is characterized by insulin resistance and relative insulin deficiency. Code E11.9 is used when the diabetes is documented without mention of specific complications (retinopathy, nephropathy, neuropathy, etc.).",
+      "includes": [
+        "Type 2 diabetes mellitus without mention of complication",
+        "Type 2 diabetes NOS"
+      ],
+      "excludes1": [
+        "E10.- (Type 1 diabetes mellitus)",
+        "E13.- (Other specified diabetes mellitus)"
+      ],
+      "related_codes": [
+        {"code": "E11.65", "description": "Type 2 Diabetes Mellitus with hyperglycemia"},
+        {"code": "E11.8", "description": "Type 2 Diabetes Mellitus with unspecified complications"},
+        {"code": "E11.69", "description": "Type 2 Diabetes Mellitus with other specified complication"}
+      ],
+      "used_in_scenarios": [1]
+    },
+    {
+      "code": "E11.65",
+      "description": "Type 2 Diabetes Mellitus with hyperglycemia",
+      "category": "E11",
+      "category_description": "Type 2 Diabetes Mellitus",
+      "chapter": "4",
+      "chapter_description": "Endocrine, nutritional and metabolic diseases (E00–E89)",
+      "block": "E08-E13",
+      "block_description": "Diabetes mellitus",
+      "clinical_notes": "Used when the diabetes is specifically documented with hyperglycemia that is not a routine part of the diabetes but is specifically noted as a complication or acute finding.",
+      "related_codes": [
+        {"code": "E11.9", "description": "Type 2 Diabetes Mellitus without complications"}
+      ],
+      "used_in_scenarios": [1]
+    },
+    {
+      "code": "M25.561",
+      "description": "Pain in right knee",
+      "category": "M25",
+      "category_description": "Other joint disorder, not elsewhere classified",
+      "chapter": "13",
+      "chapter_description": "Diseases of the musculoskeletal system and connective tissue (M00–M99)",
+      "block": "M20-M25",
+      "block_description": "Other joint disorders",
+      "clinical_notes": "This code is used for knee pain when a more specific underlying cause has not yet been identified. Common use is for initial evaluation before diagnostic imaging. The 6th character '1' specifies the right side.",
+      "laterality": "Right",
+      "includes": [
+        "Pain in right knee joint",
+        "Arthralgia of right knee"
+      ],
+      "excludes2": [
+        "M23.- (Internal derangement of knee)",
+        "M17.- (Gonarthrosis / osteoarthritis of knee)"
+      ],
+      "related_codes": [
+        {"code": "M25.562", "description": "Pain in left knee"},
+        {"code": "M25.569", "description": "Pain in unspecified knee"},
+        {"code": "M23.21", "description": "Derangement of anterior horn of medial meniscus due to old tear or injury, right knee"}
+      ],
+      "used_in_scenarios": [2]
+    },
+    {
+      "code": "M23.21",
+      "description": "Derangement of anterior horn of medial meniscus due to old tear or injury, right knee",
+      "category": "M23",
+      "category_description": "Internal derangement of knee",
+      "chapter": "13",
+      "chapter_description": "Diseases of the musculoskeletal system and connective tissue (M00–M99)",
+      "block": "M20-M25",
+      "block_description": "Other joint disorders",
+      "clinical_notes": "Specific code for meniscal tear pathology. Typically assigned after imaging (MRI) confirms the diagnosis. In Scenario 2, this would be the expected diagnosis if MRI confirms medial meniscal tear suggested by the positive McMurray test.",
+      "laterality": "Right",
+      "related_codes": [
+        {"code": "M25.561", "description": "Pain in right knee"}
+      ],
+      "used_in_scenarios": [2]
+    },
+    {
+      "code": "F33.1",
+      "description": "Major Depressive Disorder, recurrent episode, moderate",
+      "category": "F33",
+      "category_description": "Major depressive disorder, recurrent",
+      "chapter": "5",
+      "chapter_description": "Mental, behavioral and neurodevelopmental disorders (F01–F99)",
+      "block": "F30-F39",
+      "block_description": "Mood [affective] disorders",
+      "clinical_notes": "Recurrent major depressive disorder indicates that the patient has experienced multiple depressive episodes. The 'moderate' specifier is based on clinical assessment: more symptoms than needed for minimum diagnosis, moderate intensity, and moderate functional impairment. Corresponds approximately to PHQ-9 scores of 10–19.",
+      "includes": [
+        "Major depressive disorder, recurrent, moderate severity",
+        "Recurrent depressive episode, moderate"
+      ],
+      "excludes1": [
+        "F32.- (Major depressive disorder, single episode)",
+        "F34.1 (Dysthymic disorder)"
+      ],
+      "related_codes": [
+        {"code": "F33.0", "description": "Major Depressive Disorder, recurrent, mild"},
+        {"code": "F33.2", "description": "Major Depressive Disorder, recurrent, severe without psychotic features"},
+        {"code": "F33.3", "description": "Major Depressive Disorder, recurrent, severe with psychotic features"},
+        {"code": "F33.40", "description": "Major Depressive Disorder, recurrent, in remission, unspecified"}
+      ],
+      "used_in_scenarios": [3]
+    },
+    {
+      "code": "F33.0",
+      "description": "Major Depressive Disorder, recurrent episode, mild",
+      "category": "F33",
+      "category_description": "Major depressive disorder, recurrent",
+      "chapter": "5",
+      "chapter_description": "Mental, behavioral and neurodevelopmental disorders (F01–F99)",
+      "block": "F30-F39",
+      "block_description": "Mood [affective] disorders",
+      "clinical_notes": "Mild recurrent MDD: few symptoms beyond minimum criteria, minor functional impairment. Corresponds to PHQ-9 scores of 5–9.",
+      "related_codes": [
+        {"code": "F33.1", "description": "Major Depressive Disorder, recurrent, moderate"}
+      ],
+      "used_in_scenarios": [3]
+    },
+    {
+      "code": "F33.2",
+      "description": "Major Depressive Disorder, recurrent episode, severe without psychotic features",
+      "category": "F33",
+      "category_description": "Major depressive disorder, recurrent",
+      "chapter": "5",
+      "chapter_description": "Mental, behavioral and neurodevelopmental disorders (F01–F99)",
+      "block": "F30-F39",
+      "block_description": "Mood [affective] disorders",
+      "clinical_notes": "Severe recurrent MDD: most symptoms present, marked intensity, significant functional impairment. Corresponds to PHQ-9 scores of 20–27.",
+      "related_codes": [
+        {"code": "F33.1", "description": "Major Depressive Disorder, recurrent, moderate"}
+      ],
+      "used_in_scenarios": [3]
+    },
+    {
+      "code": "F41.1",
+      "description": "Generalized Anxiety Disorder",
+      "category": "F41",
+      "category_description": "Other anxiety disorders",
+      "chapter": "5",
+      "chapter_description": "Mental, behavioral and neurodevelopmental disorders (F01–F99)",
+      "block": "F40-F48",
+      "block_description": "Anxiety, dissociative, stress-related, somatoform and other nonpsychotic mental disorders",
+      "clinical_notes": "Comorbid diagnosis for Scenario 3 patient. GAD frequently co-occurs with MDD.",
+      "used_in_scenarios": [3]
+    }
+  ]
+}

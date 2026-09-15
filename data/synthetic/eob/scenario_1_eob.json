@@ -1,0 +1,90 @@
+{
+  "eob_id": "EOB-2024-0828-001",
+  "document_type": "Explanation of Benefits",
+  "payer": {
+    "name": "AcmeCare Health Insurance",
+    "address": "P.O. Box 94120, Phoenix, AZ 85070-4120",
+    "phone": "1-800-555-2263",
+    "fax": "1-800-555-2264"
+  },
+  "member": {
+    "name": "Maria Gonzalez",
+    "member_id": "ACM-8827451-01",
+    "group_number": "GRP-20240-TX",
+    "plan_name": "AcmeCare Preferred PPO",
+    "relationship": "Self"
+  },
+  "provider": {
+    "rendering_provider": "Dr. Priya Sharma, MD",
+    "npi": "1234567890",
+    "specialty": "Endocrinology",
+    "practice_name": "Capital Endocrine Associates",
+    "practice_address": "4200 Medical Parkway, Suite 310, Austin, TX 78756",
+    "tax_id": "74-1234567"
+  },
+  "claim": {
+    "claim_number": "CLM-2024-0815-001",
+    "date_of_service": "2024-08-15",
+    "date_received": "2024-08-20",
+    "date_processed": "2024-08-28",
+    "place_of_service": "11 — Office",
+    "type_of_bill": "Professional"
+  },
+  "claim_lines": [
+    {
+      "line_number": 1,
+      "cpt_code": "95251",
+      "cpt_description": "Continuous Glucose Monitoring — interpretation and report",
+      "modifier": null,
+      "icd10_codes": ["E11.9"],
+      "units": 1,
+      "billed_amount": 450.00,
+      "allowed_amount": 0.00,
+      "paid_amount": 0.00,
+      "deductible_applied": 0.00,
+      "copay": 0.00,
+      "coinsurance": 0.00,
+      "patient_responsibility": 450.00,
+      "adjustment_reason_codes": [
+        {
+          "code": "CO-167",
+          "description": "This (these) diagnosis(es) is (are) not covered, missing, or are invalid",
+          "amount": 450.00,
+          "group_code": "CO",
+          "group_description": "Contractual Obligation"
+        }
+      ],
+      "remark_codes": [
+        {
+          "code": "N657",
+          "description": "This decision was based on a Local Coverage Determination (LCD) or National Coverage Determination (NCD). An advance beneficiary notice was not required."
+        }
+      ],
+      "status": "DENIED"
+    }
+  ],
+  "totals": {
+    "total_billed": 450.00,
+    "total_allowed": 0.00,
+    "total_paid_by_plan": 0.00,
+    "total_patient_responsibility": 450.00,
+    "total_adjustments": 450.00
+  },
+  "determination": {
+    "status": "DENIED",
+    "denial_reason_code": "CO-167",
+    "denial_category": "Step Therapy Requirement",
+    "denial_narrative": "Your claim for Continuous Glucose Monitoring (CPT 95251) has been denied. Under AcmeCare Policy ACME-CGM-2024-001, authorization for Continuous Glucose Monitoring requires documented completion of step therapy protocol. Specifically, the patient must have documented trials of both a first-line oral medication (Metformin) and a second-line oral medication (sulfonylurea class agent) with evidence of inadequate glycemic control or documented contraindication before CGM may be authorized. Based on our review, adequate documentation of step therapy completion was not found in the submitted materials.",
+    "policy_reference": "ACME-CGM-2024-001"
+  },
+  "appeal_rights": {
+    "deadline_days": 180,
+    "deadline_date": "2025-02-24",
+    "appeal_address": "AcmeCare Health Insurance — Appeals Department, P.O. Box 94200, Phoenix, AZ 85070-4200",
+    "appeal_fax": "1-800-555-2265",
+    "appeal_email": "appeals@acmecare-mock.example.com",
+    "external_review_available": true,
+    "external_review_body": "Texas Department of Insurance"
+  },
+  "eob_footer": "This is not a bill. This is an Explanation of Benefits for your records. It shows how your claim was processed by AcmeCare Health Insurance."
+}

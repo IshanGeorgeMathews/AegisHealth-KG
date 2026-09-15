@@ -1,0 +1,94 @@
+{
+  "eob_id": "EOB-2024-0722-002",
+  "document_type": "Explanation of Benefits",
+  "payer": {
+    "name": "AcmeCare Health Insurance",
+    "address": "P.O. Box 94120, Phoenix, AZ 85070-4120",
+    "phone": "1-800-555-2263",
+    "fax": "1-800-555-2264"
+  },
+  "member": {
+    "name": "James Chen",
+    "member_id": "ACM-3314982-02",
+    "group_number": "GRP-20240-CA",
+    "plan_name": "AcmeCare Preferred PPO",
+    "relationship": "Self"
+  },
+  "provider": {
+    "rendering_provider": "Dr. Michael Torres, MD",
+    "npi": "9876543210",
+    "specialty": "Orthopedic Surgery",
+    "practice_name": "Bay Area Orthopedics & Sports Medicine",
+    "practice_address": "1800 El Camino Real, Suite 220, Palo Alto, CA 94306",
+    "tax_id": "94-7654321"
+  },
+  "claim": {
+    "claim_number": "CLM-2024-0712-002",
+    "date_of_service": "2024-07-12",
+    "date_received": "2024-07-15",
+    "date_processed": "2024-07-22",
+    "place_of_service": "22 — On Campus-Outpatient Hospital",
+    "type_of_bill": "Professional"
+  },
+  "claim_lines": [
+    {
+      "line_number": 1,
+      "cpt_code": "73721",
+      "cpt_description": "MRI, any joint of lower extremity; without contrast material(s)",
+      "modifier": null,
+      "icd10_codes": ["M25.561"],
+      "units": 1,
+      "billed_amount": 1250.00,
+      "allowed_amount": 0.00,
+      "paid_amount": 0.00,
+      "deductible_applied": 0.00,
+      "copay": 0.00,
+      "coinsurance": 0.00,
+      "patient_responsibility": 1250.00,
+      "adjustment_reason_codes": [
+        {
+          "code": "CO-197",
+          "description": "Precertification/authorization/notification absent",
+          "amount": 1250.00,
+          "group_code": "CO",
+          "group_description": "Contractual Obligation"
+        }
+      ],
+      "remark_codes": [
+        {
+          "code": "MA130",
+          "description": "Your claim contains incomplete and/or invalid information, and no appeal rights are afforded because the claim is unprocessable. Please submit a new claim with the required information."
+        },
+        {
+          "code": "N517",
+          "description": "Advise the member to contact the plan for assistance with prior authorization requirements."
+        }
+      ],
+      "status": "DENIED"
+    }
+  ],
+  "totals": {
+    "total_billed": 1250.00,
+    "total_allowed": 0.00,
+    "total_paid_by_plan": 0.00,
+    "total_patient_responsibility": 1250.00,
+    "total_adjustments": 1250.00
+  },
+  "determination": {
+    "status": "DENIED",
+    "denial_reason_code": "CO-197",
+    "denial_category": "Prior Authorization/Precertification Absent",
+    "denial_narrative": "Your claim for Magnetic Resonance Imaging of the right knee (CPT 73721) has been denied. Under AcmeCare Policy ACME-MRI-2024-002, all non-emergency lower extremity MRI requests require prior authorization from AcmeCare Utilization Review before the imaging study is performed. Our records indicate that no Prior Authorization Request (Form PA-200) was submitted for this service prior to the date of service. Additionally, AcmeCare policy requires documentation of a minimum 6 weeks (42 days) of conservative physical therapy prior to authorization of diagnostic imaging for knee pain.",
+    "policy_reference": "ACME-MRI-2024-002"
+  },
+  "appeal_rights": {
+    "deadline_days": 180,
+    "deadline_date": "2025-01-18",
+    "appeal_address": "AcmeCare Health Insurance — Appeals Department, P.O. Box 94200, Phoenix, AZ 85070-4200",
+    "appeal_fax": "1-800-555-2265",
+    "appeal_email": "appeals@acmecare-mock.example.com",
+    "external_review_available": true,
+    "external_review_body": "California Department of Managed Health Care"
+  },
+  "eob_footer": "This is not a bill. This is an Explanation of Benefits for your records. It shows how your claim was processed by AcmeCare Health Insurance."
+}

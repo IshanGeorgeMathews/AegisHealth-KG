@@ -1,0 +1,178 @@
+{
+  "reference_type": "CPT / HCPCS Code Reference",
+  "version": "2024",
+  "description": "CPT and HCPCS codes used in AegisHealth-KG prototype scenarios. CPT codes are copyrighted by the American Medical Association. This reference contains synthetic descriptions for educational/prototype purposes only.",
+  "codes": [
+    {
+      "code": "95251",
+      "code_type": "CPT",
+      "short_description": "Continuous Glucose Monitoring — interpretation and report",
+      "long_description": "Ambulatory continuous glucose monitoring of interstitial tissue fluid via a subcutaneous sensor for a minimum of 72 hours; analysis, interpretation, and report by a physician or other qualified health care professional",
+      "category": "Medicine",
+      "subcategory": "Non-Face-to-Face Nonphysician Services — Continuous Glucose Monitoring",
+      "typical_setting": "Office / Outpatient",
+      "requires_prior_auth": true,
+      "medicare_status": "Covered with conditions",
+      "typical_reimbursement_range": {
+        "medicare": "$42.00–$55.00",
+        "commercial": "$300.00–$600.00"
+      },
+      "common_diagnosis_codes": [
+        "E11.9 — Type 2 Diabetes Mellitus without complications",
+        "E11.65 — Type 2 Diabetes Mellitus with hyperglycemia",
+        "E10.9 — Type 1 Diabetes Mellitus without complications"
+      ],
+      "related_codes": [
+        {"code": "95249", "description": "CGM — patient-provided equipment, sensor placement, hookup, calibration, training"},
+        {"code": "95250", "description": "CGM — physician/QHP provided equipment, sensor placement, hookup, calibration, recording"}
+      ],
+      "clinical_context": "CGM provides continuous measurement of glucose levels in interstitial fluid. Code 95251 covers the physician's analysis and interpretation of the CGM data, including trend analysis, time-in-range calculations, and clinical recommendations. Typically used after a 72-hour or longer monitoring period.",
+      "used_in_scenarios": [1]
+    },
+    {
+      "code": "73721",
+      "code_type": "CPT",
+      "short_description": "MRI, lower extremity joint, without contrast",
+      "long_description": "Magnetic resonance imaging, any joint of lower extremity; without contrast material(s)",
+      "category": "Radiology",
+      "subcategory": "Diagnostic Radiology — Lower Extremities",
+      "typical_setting": "Outpatient imaging center / Hospital",
+      "requires_prior_auth": true,
+      "medicare_status": "Covered with conditions",
+      "typical_reimbursement_range": {
+        "medicare": "$250.00–$400.00",
+        "commercial": "$800.00–$2,500.00"
+      },
+      "common_diagnosis_codes": [
+        "M25.561 — Pain in right knee",
+        "M25.562 — Pain in left knee",
+        "M23.21 — Derangement of medial meniscus, right knee",
+        "M76.891 — Other enthesopathy of right lower limb"
+      ],
+      "related_codes": [
+        {"code": "73718", "description": "MRI, lower extremity other than joint; without contrast"},
+        {"code": "73720", "description": "MRI, lower extremity other than joint; without contrast then with contrast"},
+        {"code": "73722", "description": "MRI, any joint of lower extremity; without contrast then with contrast"},
+        {"code": "73723", "description": "MRI, any joint of lower extremity; with contrast"}
+      ],
+      "clinical_context": "Non-contrast MRI of lower extremity joints is the standard initial imaging modality for evaluating internal derangement (meniscal tears, ligament injuries, cartilage damage). Typically requested after failure of conservative therapy (physical therapy) and when clinical examination suggests structural pathology.",
+      "used_in_scenarios": [2]
+    },
+    {
+      "code": "90837",
+      "code_type": "CPT",
+      "short_description": "Psychotherapy, 53 minutes or more",
+      "long_description": "Psychotherapy, 53 minutes or more with patient",
+      "category": "Medicine",
+      "subcategory": "Psychiatry — Psychotherapy",
+      "typical_setting": "Office / Outpatient",
+      "requires_prior_auth": "After session 20 per calendar year (under AcmeCare policy)",
+      "medicare_status": "Covered",
+      "typical_reimbursement_range": {
+        "medicare": "$110.00–$140.00",
+        "commercial": "$150.00–$300.00"
+      },
+      "common_diagnosis_codes": [
+        "F33.1 — Major Depressive Disorder, recurrent, moderate",
+        "F33.0 — Major Depressive Disorder, recurrent, mild",
+        "F33.2 — Major Depressive Disorder, recurrent, severe",
+        "F41.1 — Generalized Anxiety Disorder",
+        "F43.10 — Post-Traumatic Stress Disorder"
+      ],
+      "related_codes": [
+        {"code": "90834", "description": "Psychotherapy, 38–52 minutes with patient"},
+        {"code": "90832", "description": "Psychotherapy, 16–37 minutes with patient"},
+        {"code": "90847", "description": "Family psychotherapy with patient present, 50 minutes"},
+        {"code": "90791", "description": "Psychiatric diagnostic evaluation"},
+        {"code": "90792", "description": "Psychiatric diagnostic evaluation with medical services"}
+      ],
+      "time_rules": {
+        "90832": "16–37 minutes",
+        "90834": "38–52 minutes",
+        "90837": "53 minutes or more"
+      },
+      "clinical_context": "Code 90837 represents a standard full-length psychotherapy session (typically 60 minutes, with ≥53 minutes of face-to-face time). Common modalities include CBT, DBT, psychodynamic therapy, and interpersonal therapy. For ongoing treatment of mood and anxiety disorders, sessions are typically weekly to biweekly.",
+      "used_in_scenarios": [3]
+    },
+    {
+      "code": "99213",
+      "code_type": "CPT",
+      "short_description": "Office visit, established patient, low complexity",
+      "long_description": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making",
+      "category": "Evaluation and Management",
+      "subcategory": "Office or Other Outpatient Services",
+      "typical_setting": "Office / Outpatient",
+      "requires_prior_auth": false,
+      "clinical_context": "Standard office visit code used for follow-up appointments. Referenced in clinical records as context for routine visits that may support the scenarios.",
+      "used_in_scenarios": [1, 2]
+    },
+    {
+      "code": "99214",
+      "code_type": "CPT",
+      "short_description": "Office visit, established patient, moderate complexity",
+      "long_description": "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making",
+      "category": "Evaluation and Management",
+      "subcategory": "Office or Other Outpatient Services",
+      "typical_setting": "Office / Outpatient",
+      "requires_prior_auth": false,
+      "clinical_context": "Office visit code for moderate-complexity follow-ups. Used for the orthopedic examination in Scenario 2 and endocrinology follow-ups in Scenario 1.",
+      "used_in_scenarios": [1, 2]
+    },
+    {
+      "code": "97110",
+      "code_type": "CPT",
+      "short_description": "Therapeutic exercises",
+      "long_description": "Therapeutic procedure, 1 or more areas, each 15 minutes; therapeutic exercises to develop strength, endurance, flexibility, and range of motion",
+      "category": "Medicine",
+      "subcategory": "Physical Medicine and Rehabilitation",
+      "typical_setting": "Outpatient rehab / Physical therapy clinic",
+      "requires_prior_auth": false,
+      "clinical_context": "Standard physical therapy exercise code. Referenced in Scenario 2's physical therapy records as part of the conservative therapy trial required before MRI authorization.",
+      "used_in_scenarios": [2]
+    },
+    {
+      "code": "97140",
+      "code_type": "CPT",
+      "short_description": "Manual therapy techniques",
+      "long_description": "Manual therapy techniques (e.g., mobilization/manipulation, manual lymphatic drainage, manual traction), 1 or more regions, each 15 minutes",
+      "category": "Medicine",
+      "subcategory": "Physical Medicine and Rehabilitation",
+      "typical_setting": "Outpatient rehab / Physical therapy clinic",
+      "requires_prior_auth": false,
+      "clinical_context": "Manual therapy code used alongside therapeutic exercises in physical therapy. Referenced in Scenario 2's conservative therapy documentation.",
+      "used_in_scenarios": [2]
+    }
+  ],
+  "carc_codes": [
+    {
+      "code": "CO-167",
+      "group_code": "CO",
+      "group_description": "Contractual Obligation",
+      "reason_code": "167",
+      "description": "This (these) diagnosis(es) is (are) not covered, missing, or are invalid",
+      "usage_context": "Used when the payer denies a claim because the diagnosis code does not support coverage for the billed service under the applicable policy. In AegisHealth-KG, mapped to mock denial category STEP_THERAPY_NOT_SATISFIED.",
+      "mock_denial_category": "STEP_THERAPY_NOT_SATISFIED",
+      "used_in_scenarios": [1]
+    },
+    {
+      "code": "CO-197",
+      "group_code": "CO",
+      "group_description": "Contractual Obligation",
+      "reason_code": "197",
+      "description": "Precertification/authorization/notification absent",
+      "usage_context": "Used when the required prior authorization was not obtained before the service was rendered. In AegisHealth-KG, mapped to mock denial category PRIOR_AUTH_MISSING.",
+      "mock_denial_category": "PRIOR_AUTH_MISSING",
+      "used_in_scenarios": [2]
+    },
+    {
+      "code": "CO-50",
+      "group_code": "CO",
+      "group_description": "Contractual Obligation",
+      "reason_code": "50",
+      "description": "These are non-covered services because this is not deemed a 'medical necessity' by the payer",
+      "usage_context": "Used when the payer determines that the billed service is not medically necessary based on clinical review. In AegisHealth-KG, mapped to mock denial category MEDICAL_NECESSITY_NOT_ESTABLISHED.",
+      "mock_denial_category": "MEDICAL_NECESSITY_NOT_ESTABLISHED",
+      "used_in_scenarios": [3]
+    }
+  ]
+}

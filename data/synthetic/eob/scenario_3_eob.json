@@ -1,0 +1,118 @@
+{
+  "eob_id": "EOB-2024-0918-003",
+  "document_type": "Explanation of Benefits",
+  "payer": {
+    "name": "AcmeCare Health Insurance",
+    "address": "P.O. Box 94120, Phoenix, AZ 85070-4120",
+    "phone": "1-800-555-2263",
+    "fax": "1-800-555-2264"
+  },
+  "member": {
+    "name": "Aisha Williams",
+    "member_id": "ACM-5567123-03",
+    "group_number": "GRP-20240-NY",
+    "plan_name": "AcmeCare Preferred PPO",
+    "relationship": "Self"
+  },
+  "provider": {
+    "rendering_provider": "Dr. Rebecca Liu, MD",
+    "npi": "5551234567",
+    "specialty": "Psychiatry",
+    "practice_name": "Manhattan Behavioral Health Associates",
+    "practice_address": "300 East 56th Street, Suite 1400, New York, NY 10022",
+    "tax_id": "13-9876543"
+  },
+  "claim": {
+    "claim_number": "CLM-2024-0910-003",
+    "date_of_service": "2024-09-10",
+    "date_received": "2024-09-12",
+    "date_processed": "2024-09-18",
+    "place_of_service": "11 — Office",
+    "type_of_bill": "Professional"
+  },
+  "claim_lines": [
+    {
+      "line_number": 1,
+      "cpt_code": "90837",
+      "cpt_description": "Psychotherapy, 53 minutes or more with patient",
+      "modifier": null,
+      "icd10_codes": ["F33.1"],
+      "units": 1,
+      "billed_amount": 200.00,
+      "allowed_amount": 0.00,
+      "paid_amount": 0.00,
+      "deductible_applied": 0.00,
+      "copay": 0.00,
+      "coinsurance": 0.00,
+      "patient_responsibility": 200.00,
+      "adjustment_reason_codes": [
+        {
+          "code": "CO-50",
+          "description": "These are non-covered services because this is not deemed a 'medical necessity' by the payer",
+          "amount": 200.00,
+          "group_code": "CO",
+          "group_description": "Contractual Obligation"
+        }
+      ],
+      "remark_codes": [
+        {
+          "code": "N386",
+          "description": "This decision was based on a clinical review. Refer to the enclosed clinical review summary for details."
+        },
+        {
+          "code": "N590",
+          "description": "You may request a copy of the criteria used to make this determination."
+        }
+      ],
+      "session_context": {
+        "session_number": 21,
+        "calendar_year": 2024,
+        "sessions_authorized_without_review": 20,
+        "sessions_used_ytd": 20,
+        "note": "Session 21 exceeds the standard 20-session annual authorization. Medical necessity justification was reviewed and denied."
+      },
+      "status": "DENIED"
+    }
+  ],
+  "totals": {
+    "total_billed": 200.00,
+    "total_allowed": 0.00,
+    "total_paid_by_plan": 0.00,
+    "total_patient_responsibility": 200.00,
+    "total_adjustments": 200.00
+  },
+  "prior_sessions_summary": {
+    "sessions_1_through_20": {
+      "status": "PAID",
+      "date_range": "2024-01-09 to 2024-08-27",
+      "total_billed": 4000.00,
+      "total_paid": 3200.00,
+      "total_patient_copays": 800.00
+    }
+  },
+  "clinical_review": {
+    "review_date": "2024-09-16",
+    "reviewer": "AcmeCare Utilization Review Committee",
+    "review_type": "Medical Necessity Determination",
+    "summary": "The Utilization Review Committee reviewed the submitted medical necessity justification package. The patient's most recent PHQ-9 score of 12 indicates moderate depression, representing improvement from baseline of 18. The committee acknowledges progress but notes the current score approaches the mild range (score < 10) and questions whether continued intensive psychotherapy is necessary versus alternative lower-intensity interventions. The standard 20-session benefit is designed to provide an adequate course of acute-phase treatment for most patients.",
+    "determination": "Medical necessity for session 21+ NOT established"
+  },
+  "determination": {
+    "status": "DENIED",
+    "denial_reason_code": "CO-50",
+    "denial_category": "Medical Necessity Not Established",
+    "denial_narrative": "Your claim for Psychotherapy (CPT 90837), session 21 of calendar year 2024, has been denied. Under AcmeCare Policy ACME-MH-2024-003, outpatient psychotherapy sessions 1 through 20 per calendar year are authorized without additional clinical review. Sessions beyond 20 per calendar year require documented medical necessity justification submitted for clinical review. After clinical review, AcmeCare's Utilization Review Committee has determined that the submitted documentation does not establish sufficient medical necessity for continuation of psychotherapy services beyond the standard 20-session annual benefit.",
+    "policy_reference": "ACME-MH-2024-003"
+  },
+  "appeal_rights": {
+    "deadline_days": 180,
+    "deadline_date": "2025-03-17",
+    "appeal_address": "AcmeCare Health Insurance — Appeals Department, P.O. Box 94200, Phoenix, AZ 85070-4200",
+    "appeal_fax": "1-800-555-2265",
+    "appeal_email": "appeals@acmecare-mock.example.com",
+    "external_review_available": true,
+    "external_review_body": "New York State Department of Financial Services",
+    "parity_notice": "For behavioral health denials based on medical necessity, you may request information regarding the criteria used to make this determination and how those criteria compare to criteria applied to medical/surgical benefits, pursuant to the Mental Health Parity and Addiction Equity Act (MHPAEA)."
+  },
+  "eob_footer": "This is not a bill. This is an Explanation of Benefits for your records. It shows how your claim was processed by AcmeCare Health Insurance."
+}
